@@ -271,5 +271,32 @@
             <field name="name">Vendor Credit Notes</field>
         </record>
 
+
+        <record id="description_internal_tree_search" model="ir.ui.view">
+          <field name="name">account.invoice.description.internal.search</field>
+          <field name="model">account.invoice</field>
+          <field name="arch" type="xml">
+            <search string="Description for Internal">
+              <field name="partner_id"/>
+            </search>
+          </field>
+        </record>
+
+        <!--Inherit account invoice search view-->
+        <record id="view_acoount_invoice_inherit_search" model="ir.ui.view">
+          <field name="name">account.invoice.search.expand.filter</field>
+          <field name="model">account.invoice</field>
+          <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+          <field name="arch" type="xml">
+
+            <xpath expr="//search" position="inside">
+              <field name="invoice_line_ids" string="Notas - Contiene" filter_domain="[('invoice_line_ids.product_id.description','ilike',self)]"/>
+            </xpath>
+
+          </field>
+        </record>
+
+
+
     </data>
 </odoo>

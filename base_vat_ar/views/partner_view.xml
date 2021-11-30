@@ -15,6 +15,9 @@
                     <field name="dst_cuit_id" attrs="{
                         'invisible': [('dst_cuit', '!=', True)]}"/>
                 </field>
+                <field name="category_id" position="after">
+                 <field name="freights"/>
+                </field>
             </field>
         </record>
 

@@ -33,6 +33,7 @@
         'data/partner_data.xml',
         'data/dst_cuit_codes_data.xml',
         'views/partner_view.xml',
+        'reports/stock_picking_inherit.xml',
     ],
     "installable": True,
     "application": True,

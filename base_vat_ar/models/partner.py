@@ -48,6 +48,7 @@ class ResPartner(models.Model):
                                   string='Country CUIT')
     dst_cuit = fields.Boolean(string="Enable DST CUIT",
                               related='document_type_id.dst_cuit')
+    freights  = fields.Char(string='Freights')
 
     @api.constrains('vat', 'document_type_id')
     def check_vat_duplicated(self):

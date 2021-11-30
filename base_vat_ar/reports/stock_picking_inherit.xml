@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <template id="stock_picking_inherit" inherit_id="stock.report_delivery_document">
+    <xpath expr="//div[@name='partner_header']" position="inside">
+        <div t-if="o.partner_id.freights">
+          Fletes:
+          <span t-field="o.partner_id.freights"/>
+        </div>
+    </xpath>
+  </template>
+</odoo>

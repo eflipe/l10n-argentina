@@ -45,6 +45,7 @@
         "views/iibb_situation_view.xml",
         "views/res_users_view.xml",
         "views/menuitems.xml",
+        "views/sale_order_view.xml",
     ],
     "installable": True,
     "application": True,
