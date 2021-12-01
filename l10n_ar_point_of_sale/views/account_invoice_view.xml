@@ -271,17 +271,6 @@
             <field name="name">Vendor Credit Notes</field>
         </record>
 
-
-        <record id="description_internal_tree_search" model="ir.ui.view">
-          <field name="name">account.invoice.description.internal.search</field>
-          <field name="model">account.invoice</field>
-          <field name="arch" type="xml">
-            <search string="Description for Internal">
-              <field name="partner_id"/>
-            </search>
-          </field>
-        </record>
-
         <!--Inherit account invoice search view-->
         <record id="view_acoount_invoice_inherit_search" model="ir.ui.view">
           <field name="name">account.invoice.search.expand.filter</field>
