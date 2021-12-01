@@ -8,11 +8,9 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_sales_order_filter"/>
         <field name="arch" type="xml">
-
           <xpath expr="//search" position="inside">
             <field name="order_line" string="Notas - Contiene" filter_domain="[('order_line.product_id.description','ilike',self)]"/>
           </xpath>
-
         </field>
       </record>
 
